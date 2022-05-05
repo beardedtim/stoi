@@ -1,10 +1,11 @@
-import { Worker } from '@temporalio/worker';
+import { Worker } from "@temporalio/worker";
 
 async function run() {
   const worker = await Worker.create({
-    workflowsPath: require.resolve('./workflows'),
-    taskQueue: 'signals-queries',
+    workflowsPath: require.resolve("./workflows"),
+    taskQueue: "browser-recording",
   });
+
   await worker.run();
 }
 
